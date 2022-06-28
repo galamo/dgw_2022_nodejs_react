@@ -7,7 +7,8 @@
 4. Error handling
 5. Common libs: cors,joi,dotEnv
 
-
+#### Api:
+[products](https://dummyjson.com/docs/products)
 ### Node.js
 #### Testing your environment
 1. open `CMD`
