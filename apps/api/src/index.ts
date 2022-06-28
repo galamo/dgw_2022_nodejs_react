@@ -3,16 +3,21 @@ import dotenv from "dotenv"
 import bodyParser from "body-parser"
 import { productsRouter } from "./products"
 import { loginRouter } from "./login"
-
+import cors from "cors"
 import addRequestId from "./middleware/requestId";
+import logger from "./logger"
 dotenv.config();
 
 const app = express();
 
 app.use(bodyParser.json())
 app.use(addRequestId)
+app.use(cors())
 app.use((req, res, next) => {
+    logger.info(`${new Date().toISOString()} : ${req.url}`)
     console.log(`${new Date().toISOString()} : ${req.url}`)
+    console.log(`${new Date().toISOString()} : ${req.url}`)
+
     next()
 })
 

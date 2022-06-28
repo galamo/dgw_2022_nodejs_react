@@ -8,12 +8,17 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const products_1 = require("./products");
 const login_1 = require("./login");
+const cors_1 = __importDefault(require("cors"));
 const requestId_1 = __importDefault(require("./middleware/requestId"));
+const logger_1 = __importDefault(require("./logger"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use(body_parser_1.default.json());
 app.use(requestId_1.default);
+app.use((0, cors_1.default)());
 app.use((req, res, next) => {
+    logger_1.default.info(`${new Date().toISOString()} : ${req.url}`);
+    console.log(`${new Date().toISOString()} : ${req.url}`);
     console.log(`${new Date().toISOString()} : ${req.url}`);
     next();
 });

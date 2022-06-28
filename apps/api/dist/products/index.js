@@ -22,7 +22,7 @@ productsRouter.use(middleware_apikey_1.default);
 productsRouter.get("/", (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const result = yield axios_1.default.get(process.env.PRODUCTS_URL);
-        res.json(result.data);
+        return res.json(result.data);
     }
     catch (ex) {
         console.log(ex.message);

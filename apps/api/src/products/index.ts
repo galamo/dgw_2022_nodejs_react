@@ -8,7 +8,7 @@ productsRouter.get("/",
     async (req: express.Request, res: express.Response, next: express.NextFunction) => {
         try {
             const result = await axios.get(process.env.PRODUCTS_URL)
-            res.json(result.data)
+            return res.json(result.data)
         } catch (ex) {
             console.log(ex.message)
             return next(new Error(ex.message))
