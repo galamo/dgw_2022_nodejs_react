@@ -136,6 +136,11 @@ app.get('/healthcheck', function (req, res) {
  - GET `/products/search?q=param`
  - POST `/auth/login`
 
+# Ex2
+1. Add new entry point /GET products/:id
+2. according the following API  [products](https://dummyjson.com/docs/products)
+
+
 
 4. Create Router
     ```js
