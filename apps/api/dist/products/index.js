@@ -29,3 +29,25 @@ productsRouter.get("/", (req, res, next) => __awaiter(void 0, void 0, void 0, fu
         return next(new Error(ex.message));
     }
 }));
+productsRouter.get("/search", (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { q: value } = req.query;
+        const result = yield axios_1.default.get(`${process.env.PRODUCTS_URL}/search?q=${value}`);
+        res.json(result.data);
+    }
+    catch (ex) {
+        console.log(ex.message);
+        return next(new Error(ex.message));
+    }
+}));
+productsRouter.get("/:id", (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const id = req.params.id;
+        const result = yield axios_1.default.get(`${process.env.PRODUCTS_URL}/${id}`);
+        res.json(result.data);
+    }
+    catch (ex) {
+        console.log(ex.message);
+        return next(new Error(ex.message));
+    }
+}));
