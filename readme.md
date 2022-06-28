@@ -75,6 +75,7 @@
         "@types/node": "^15.12.2"
     }  
     ```
+
 - Install the dependencies
 - Run 
   ```cmd
@@ -104,6 +105,10 @@
             "node_modules"
         ]
     }
+    ```
+    - concurrently script
+    ```js
+    "_run-all": "concurrently -k -p \"[{name}]\" -n \"TypescriptCompiler,application\" -c \"red.bold,yellow.bold,\" \"npm run build_watch\" \"npm run dev\"",
     ```
 
 #### Express
