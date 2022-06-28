@@ -125,6 +125,11 @@ app.get('/healthcheck', function (req, res) {
 })
 ```
 
+# Ex1
+1. Add new entry point /GET username
+2. return the USER_NAME from .env variable
+
+
 3. Entry points
  - GET `/products`
  - GET `/products/:id`
