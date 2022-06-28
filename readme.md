@@ -6,6 +6,10 @@
 3. Testing our Api
 4. Error handling
 5. Common libs: cors,joi,dotEnv
+#### Git
+- `git checkout -b <YOUR_BRANCH_NAME>`
+- `git checkout master`
+- `git pull`
 
 #### Api:
 [products](https://dummyjson.com/docs/products)
