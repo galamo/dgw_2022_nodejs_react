@@ -166,3 +166,5 @@ app.get('/healthcheck', function (req, res) {
 5. Hooks 
 
 
+### redux toolkit
+https://redux-toolkit.js.org/tutorials/quick-start
