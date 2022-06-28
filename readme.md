@@ -153,7 +153,6 @@ app.get('/healthcheck', function (req, res) {
     ```
 
 ## React
-
 #### install globals
 `npm install -g create-react-app`
 #### creating react applicaiton
